@@ -4,7 +4,7 @@ This is the "0-add integer" moduledef add_integer(a, b):
 """
 
 
-def add_integer(a, b):
+def add_integer(a, b=98):
     """    Return the addition of two numbers.
     """
     if not isinstance(a, (int, float)):
