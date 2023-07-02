@@ -10,7 +10,7 @@ import sys
 
 if __name__ == "__main__":
     link = sys.argv[1]
-    email = {"email": sys.argv[2]}
+    value = {"email": sys.argv[2]}
 
-    r = requests.post(link, data=email)
+    fetch = requests.post(link, data=value)
     print(fetch.text)
