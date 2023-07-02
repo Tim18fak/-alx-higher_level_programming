@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-# Fetches https://alx-intranet.hbtn.io/status
+""" Fetches https://alx-intranet.hbtn.io/status"""
 import urllib.request
 
-link = "https:/alx-intranet.btn.io/status"
-
 if __name__ == "__main__":
+    link = "https:/alx-intranet.btn.io/status"
     request = urllib.request.Request(link)
     with urllib.request.urlopen(request) as response:
         body = response.read()
