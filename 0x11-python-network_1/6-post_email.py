@@ -13,4 +13,4 @@ if __name__ == "__main__":
     email = {"email": sys.argv[2]}
 
     r = requests.post(link, data=email)
-    print(r.text)
+    print(fetch.text)
