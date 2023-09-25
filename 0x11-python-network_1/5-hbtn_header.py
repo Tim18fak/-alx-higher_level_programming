@@ -2,12 +2,12 @@
 """Displays the X-Request-Id header variable
 Usage: python3 5-hbtn_header.py <URL>
 """
-import requests
 import sys
+import requests
 
 
 if __name__ == "__main__":
-    link = sys.argv[1]
+    url = sys.argv[1]
 
-    fetch = requests.get(link)
+    r = requests.get(url)
     print(r.headers.get("X-Request-Id"))

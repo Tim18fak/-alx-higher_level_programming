@@ -4,15 +4,15 @@ Displays the response body.
 Usage: python3 7-error_code.py <URL>
   - Handles HTTP errors.
 """
-import requests
 import sys
+import requests
 
 
 if __name__ == "__main__":
-    link = sys.argv[1]
+    url = sys.argv[1]
 
-    fetch= requests.get(link)
-    if fetch.status_code >= 400:
-        print("Error code: {}".format(fetch.status_code))
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
     else:
-        print(fetch.text)
+        print(r.text)
