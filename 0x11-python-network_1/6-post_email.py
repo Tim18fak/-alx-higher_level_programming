@@ -3,14 +3,13 @@
 Usage: python3 6-post_email.py <URL> <email>
   - show the body of the response.
 """
-import requests
 import sys
-
+import requests
 
 
 if __name__ == "__main__":
-    link = sys.argv[1]
+    url = sys.argv[1]
     value = {"email": sys.argv[2]}
 
-    fetch = requests.post(link, data=value)
-    print(fetch.text)
+    r = requests.post(url, data=value)
+    print(r.text)
